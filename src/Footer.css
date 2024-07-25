@@ -1,0 +1,26 @@
+footer {
+    display: flex;
+    padding: 42px 10% 65px;
+    background-color: var(--black);
+    color: white;
+}
+
+footer p {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 200;
+}
+
+footer ul li {
+    padding: 4px 0;
+    list-style: none;
+}
+
+footer ul li a {
+    font-family: "Bricolage Grotesque", sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}

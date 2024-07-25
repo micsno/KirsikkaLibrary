@@ -1,0 +1,129 @@
+.ProfilePage {
+    display: flex;
+    padding-top: 84px;
+    flex-direction: column;
+    color: var(--black);
+    position: relative;
+}
+
+.ProfilePage h2 {
+    margin-bottom: 18px;
+}
+
+.ProfilePage h3 {
+    font-size: 17px;
+}
+
+.ProfilePage .container {
+    padding: 28px 0 12px;
+}
+
+.ProfilePage .simple-btn {
+    margin-left: -8px;
+}
+
+.ProfilePage button span {
+    display: inline-block;
+    margin: 8px 4px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    transform: rotate(90deg);
+}
+
+.ProfilePage .rotated {
+    transform: rotate(270deg);
+}
+
+.profile-avatar {
+    display: inline-flex;
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    background-color: dodgerblue;
+    border-radius: 50%;
+    color: white;
+    font-size: 26px;
+}
+
+.book-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loan-list {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+    width: 100%;
+}
+
+.loan-item, .loan-history-item {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    margin-bottom: 12px;
+    background-color: var(--greige);
+    border-radius: 4px;
+}
+
+.loan-item h3, .loan-history-item h3 {
+    text-decoration: underline;
+}
+
+.loan-item h3:hover, .loan-history-item h3:hover {
+    cursor: pointer;
+    color: var(--darkpink);
+}
+
+.loan-item .container-2:nth-child(2), .loan-history-item .container-2:nth-child(2) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.selected-book-close-button {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    margin-bottom: 30px;
+    align-items: center;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.loan-item p, .loan-history-item p {
+    margin: 2px 0;
+}
+
+.history-close-button:hover {
+    color: var(--cherry);
+}
+
+
+.history-element button {
+    margin-bottom: 4px;
+    padding: 14px 18px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    line-height: 1;
+    transition: .1s;
+}
+
+.close-history {
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .book-item {
+        width: 80%;
+    }
+}

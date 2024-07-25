@@ -1,0 +1,28 @@
+#CherryPicks {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#CherryPicks .books-slider-btn {
+    padding: 12px;
+    background-color: var(--black);
+    opacity: .9;
+    line-height: .5;
+    color: white;
+    position: absolute;
+    top: 30%;
+}
+
+#CherryPicks .books-slider-btn:hover {
+    opacity: 1;
+}
+
+#CherryPicks .disabled {
+    opacity: 0;
+}
+
+#CherryPicks:hover .disabled {
+    opacity: .5;
+}

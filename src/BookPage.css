@@ -1,0 +1,273 @@
+.BookPage {
+    display: flex;
+    flex-direction: column;
+    color: var(--black);
+    position: relative;
+}
+
+/* --------------------------------- Hero section --------------------------------- */
+
+#hero {
+    display: flex;
+    height: 630px;
+    padding: 120px 10% 20px;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: rgba(255, 191, 200, 0.3); */
+    background-color: rgba(225, 140, 196, 0.3);
+    background-blend-mode: soft-light;
+    position: relative;
+}
+
+#hero::before {
+    content: "";
+    width: 100%;
+    height: inherit;
+    background-color: var(--pink);
+    background-image: url(./assets/cherry-ink_e.jpg);
+    background-position: 100% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#hero h1 {
+    font-size: 48px;
+}
+
+#hero p {
+    margin: 8px 0;
+    font-size: 20px;
+}
+
+.book-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* --------------------------------- Search --------------------------------- */
+#search {
+    max-width: 950px;
+    margin: 18px 0;
+    display: grid;
+    grid-template-columns: calc(100% - 150px - 100px) 150px 100px;
+}
+
+#search input {
+    padding: 10px 20px;
+    border-radius: 50px 0 0 50px;
+    border: 2px solid var(--black);
+    border-right: none;
+    font-family: var(--text-font);
+    font-size: 17px;
+}
+
+#search input:focus {
+    outline: none;
+}
+
+#search-options {
+    height: 56px;
+    padding: 10px 18px;
+    border: 2px solid var(--black);
+    border-left: none;
+    border-right: none;
+    font-family: var(--heading-font);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+#search-options:hover {
+    cursor: pointer;
+}
+
+#search-options:focus {
+    outline: none;
+}
+
+#search button {
+    padding: 10px 18px;
+    background-color: var(--black);
+    border: 2px solid var(--black);
+    border-radius: 0 50px 50px 0;
+    color: white;
+}
+
+#search button:hover {
+    background-color: var(--cherry);
+    border-color: var(--cherry);
+}
+
+#search button span {
+    margin-top: 2px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.dropdown {
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-y: auto;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: var(--pink);
+}
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.book-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0 40px;
+    border-radius: 15px;
+    width: 60%;
+}
+
+.centered-book {
+    margin: 0 auto;
+    background-color: #EEF5F6
+}
+
+.bookTitle {
+    margin-bottom: 18px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bookInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.bookAuthor,
+.bookYear,
+.bookGenre,
+.bookIsbn {
+    font-size: 16px;
+}
+
+#bookpage-book-close-button {
+    margin-left: 20px;
+}
+
+.genre-cover-size {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.post-review textarea {
+    padding: 4px 6px;
+    font-size: 16px;
+}
+
+/* -------------------------- Review -------------------------- */
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.review {
+    padding: 10px 10px 18px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.review-header-text {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.review-header-text h3 {
+    font-size: 24px;
+}
+
+.review-text {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.review-text p {
+    margin: 4px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.review-text p q {
+    display: inline-block;
+    margin: 6px 0 0;
+    font-weight: 400;
+}
+
+#delete-review-btn {
+    padding: 8px;
+    font-size: 30px;
+    background: transparent;
+    color: var(--cherry);
+    position: absolute;
+    top: 2px;
+    right: 10px;
+}
+
+#delete-review-btn:hover {
+    cursor: pointer;
+    color: var(--darkpink);
+}
+
+.selected-book-buttons {
+    margin: 28px 0 12px;
+}
+
+.disabled-btn {
+    padding: 16px 28px;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--heading-font);
+    font-size: 16px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+@media (max-width: 768px) {
+    .book-item {
+        width: 80%;
+    }
+}

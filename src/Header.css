@@ -1,0 +1,225 @@
+/* All :root variables can be found in App.css */
+
+/* --------------------------------- Navigation and header --------------------------------- */
+nav,
+header h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 84px;
+    padding: 0 10%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    color: white;
+    position: fixed;
+    z-index: 100;
+}
+
+#nav-inner {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    color: white;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s;
+}
+
+#logo:hover {
+    color: var(--pink);
+}
+
+nav ul {
+    display: flex;
+    gap: 28px;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav button {
+    padding: 16px 28px;
+    background-color: var(--pink);
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: .3s;
+}
+
+#nav-align-right {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#mobile-login-section {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#mobile-menu-btn {
+    width: 30px;
+    height: 50px;
+    position: relative;
+    background: none;
+    border-radius: 0;
+}
+
+#mobile-menu-btn div {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px auto;
+    padding: 0;
+    border: none;
+    transition: 0.5s;
+}
+
+.change-mobile-menu-btn #menu-top {
+    transform: translateY(8px) rotate(135deg);
+}
+
+.change-mobile-menu-btn #menu-bottom {
+    transform: translateY(-8px) rotate(-135deg);
+}
+
+.change-mobile-menu-btn #menu-center  {
+    transform: scale(0);
+}
+
+#nav-align-right .material-symbols-outlined {
+    margin-left: 12px;
+    font-variation-settings:
+        'wght' 300;
+}
+
+#languageSelector {
+    max-height: 28px;
+    background: transparent;
+    color: white;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 16px;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-overflow: '';
+}
+
+#languageSelector:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#languageSelector option {
+    color: var(--black);
+}
+
+#languageSelector option:hover {
+    background-color: var(--darkpink);
+    background: var(--cherry);
+}
+
+#languageSelector option:focus {
+    background-color: var(--cherry);
+    background: var(--cherry);
+}
+
+/* --------------------------------- Responsive --------------------------------- */
+@media only screen and (max-width: 600px) {}
+
+@media only screen and (min-width: 600px) {}
+
+@media only screen and (max-width: 768px) {
+    #nav-inner ul {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    nav {
+        padding: 0;
+    }
+
+    #nav-inner {
+        padding: 0 50px;
+        position: relative;
+    }
+
+    #nav-inner ul {
+        width: 100%;
+        height: var(--mobile-menu-links-height);
+        padding: 20px 50px 0;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--black);
+        position: absolute;
+        top: var(--mobile-menu-links-top-position);
+        right: 0;
+        gap: 12px;
+    }
+
+    #nav-align-right {
+        width: 100%;
+        height: 90px;
+        padding: 0 50px 12px;
+        background-color: var(--black);
+        position: absolute;
+        top: calc(var(--mobile-menu-links-height) + var(--mobile-menu-links-top-position));
+        right: 0;
+    }
+
+    #nav-align-right .material-symbols-outlined {
+        margin-left: 0;
+    }
+
+    #mobile-menu-btn {
+        padding: 0;
+        /* background: none; */
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    nav {
+        padding: 0 50px;
+    }
+
+    nav ul {
+        gap: 18px;
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 1076) {
+    nav ul {
+        gap: 28px;
+    }
+}

@@ -1,0 +1,107 @@
+:root {
+    --books-item-width: 200px;
+    --books-item-height: 406px;
+}
+
+#Newbookpicks {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider-wrapper {
+    margin-left: -8px;
+    overflow-x: hidden;
+}
+
+.books-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 18px 0;
+    transition: .3s;
+}
+
+.books-item {
+    display: inline-flex;
+    width: var(--books-item-width);
+    height: var(--books-item-height);
+    margin: 0 8px;
+    padding: 8px;
+    flex-direction: column;
+    transition: .3s;
+}
+
+.books-item:hover {
+    cursor: pointer;
+}
+
+.books-slider h3 {
+    max-height: 104px;
+    margin-bottom: 6px;
+    font-size: 17px;
+    line-height: 1.1;
+    overflow: hidden;
+}
+
+.books-item p {
+    font-size: 14px;
+    color: #444;
+}
+
+.thumbnail {
+    width: calc(var(--books-item-width) - 2 * 8px);
+    height: 240px;
+    margin-bottom: 12px;
+    background-color: lightgray;
+    position: relative;
+}
+
+.thumbnail::after {
+    content: "";
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.thumbnail:hover::after {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#Newbookpicks .books-slider-btn {
+    padding: 12px;
+    background-color: var(--black);
+    opacity: .9;
+    line-height: .5;
+    color: white;
+    position: absolute;
+    top: 30%;
+}
+
+#Newbookpicks .books-slider-btn:hover {
+    opacity: 1;
+}
+
+.arr-left {
+    left: -32px;
+}
+
+.arr-right {
+    right: -32px;
+}
+
+#Newbookpicks .disabled {
+    opacity: 0;
+}
+
+#Newbookpicks:hover .disabled {
+    opacity: .5;
+}
+
+.disabled:hover {
+    opacity: .5;
+}

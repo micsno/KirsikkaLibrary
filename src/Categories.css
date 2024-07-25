@@ -1,0 +1,66 @@
+.category-btns {
+    display: flex;
+    padding: 18px 8px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.category-btns button {
+    padding: 10px 18px;
+    background: transparent;
+    border: 2px solid var(--black);
+    font-family: var(--text-font), sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .2s;
+}
+
+.category-btns button:hover {
+    background: var(--black);
+    color: white;
+}
+
+.category-btns .active {
+    background: var(--black);
+    color: white;
+}
+
+h2.all-books-heading {
+    max-width: 1050px;
+}
+
+.books-container {
+    display: flex;
+    margin: 18px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: .3s;
+}
+
+.slider-container {
+    position: relative;
+}
+
+.slider-container .books-slider-btn {
+    padding: 12px;
+    background-color: var(--black);
+    opacity: .9;
+    line-height: .5;
+    color: white;
+    position: absolute;
+    top: 30%;
+}
+
+.slider-container .books-slider-btn:hover {
+    opacity: 1;
+}
+
+.slider-container .disabled {
+    opacity: 0;
+}
+
+.slider-container:hover .disabled {
+    opacity: .5;
+}
